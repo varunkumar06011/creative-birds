@@ -216,27 +216,27 @@ function App() {
       <section className="portfolio-section" id="portfolio">
         <p className="section-title" style={{ fontSize: '18px', marginBottom: '32px' }}>OUR PORTFOLIO</p>
         <div className="portfolio-grid">
-          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg1} alt="Logo Designs" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Logo Designs</div>
           </a>
-          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg2} alt="Stationary, Flyers & Brochures" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Stationary, Flyers & Brochures</div>
           </a>
-          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg3} alt="Packaging" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Packaging</div>
           </a>
-          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg4} alt="Branding" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Branding</div>
           </a>
-          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg5} alt="Social Media Creatives" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Social Media Creatives</div>
           </a>
-          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg6} alt="3D & Videos" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">3D & Videos</div>
           </a>
@@ -249,18 +249,18 @@ function App() {
       <section className="pricing-section" id="pricing">
         <p className="section-title" style={{ marginBottom: '40px' }}>PRICING</p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '1000px', margin: '0 auto' }}>
-          <div style={{ borderRight: '1px solid rgba(255,255,255,0.3)', borderBottom: '1px solid rgba(255,255,255,0.3)', padding: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={PricingImg1} alt="Hourly and Daily Plans" style={{ maxWidth: '100%', objectFit: 'contain' }} />
+        <div className="pricing-grid">
+          <div className="pricing-cell border-right border-bottom">
+            <img src={PricingImg1} alt="Hourly and Daily Plans" className="pricing-img" />
           </div>
-          <div style={{ borderBottom: '1px solid rgba(255,255,255,0.3)', padding: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={PricingImg2} alt="Basic, Standard, Premium Plans" style={{ maxWidth: '100%', objectFit: 'contain' }} />
+          <div className="pricing-cell border-bottom">
+            <img src={PricingImg2} alt="Basic, Standard, Premium Plans" className="pricing-img" />
           </div>
-          <div style={{ borderRight: '1px solid rgba(255,255,255,0.3)', padding: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={PricingImg3} alt="Logo & Branding Identity" style={{ maxWidth: '100%', objectFit: 'contain' }} />
+          <div className="pricing-cell border-right">
+            <img src={PricingImg3} alt="Logo & Branding Identity" className="pricing-img" />
           </div>
-          <div style={{ padding: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={PricingImg4} alt="Monthly Package" style={{ maxWidth: '100%', objectFit: 'contain' }} />
+          <div className="pricing-cell">
+            <img src={PricingImg4} alt="Monthly Package" className="pricing-img" />
           </div>
         </div>
       </section>
