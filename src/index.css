@@ -91,7 +91,7 @@ nav {
 
 /* ── STATS ── */
 .stats {
-  background: var(--navy);
+  background: #1D1C77;
   display: flex; justify-content: center; gap: 0;
   padding: 60px 48px;
 }
@@ -177,17 +177,168 @@ section { padding: 64px 48px; }
 .portfolio-label { font-size: 13px; font-weight: 700; color: #fff; padding: 14px 10px; text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* ── PRICING ── */
-.pricing-section { background: var(--navy-dark); }
-.pricing-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  max-width: 1000px; margin: 0 auto;
+.pricing-section { background: #2828a8; }
+.pricing-layout { max-width: 1000px; margin: 0 auto; }
+.rupee-red { color: #e53935; }
+
+/* Top row: hourly/daily on left, plans on right */
+.pricing-top-row {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px;
+  margin-bottom: 24px;
 }
-.pricing-cell {
-  padding: 32px; display: flex; justify-content: center; align-items: center;
+
+/* Hourly / Daily cards */
+.pricing-hourly-daily {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
 }
-.pricing-cell.border-right { border-right: 1px solid rgba(255,255,255,0.3); }
-.pricing-cell.border-bottom { border-bottom: 1px solid rgba(255,255,255,0.3); }
-.pricing-img { max-width: 100%; height: auto; object-fit: contain; }
+.pricing-card-hd {
+  background: rgba(0,0,40,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.pricing-badge-red {
+  background: #e53935;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 5px 24px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.pricing-price {
+  font-size: 18px; font-weight: 700; color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.pricing-price .price-big {
+  font-size: 56px; font-weight: 900;
+  text-shadow: 1px 1px 0 #c62828, 2px 2px 0 #c62828, 3px 3px 0 #c62828, 4px 4px 0 #c62828;
+}
+.pricing-badge-yellow {
+  background: var(--yellow);
+  color: var(--navy-dark);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.pricing-desc {
+  font-size: 13px; font-weight: 800; color: #fff;
+  text-transform: uppercase; letter-spacing: 1.5px; line-height: 1.5;
+  margin-top: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Basic / Standard / Premium plans */
+.pricing-plans-card {
+  background: rgba(0,0,40,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 20px 12px;
+}
+.pricing-plans-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+}
+.plan-col {
+  text-align: center;
+  padding: 0 8px;
+}
+.plan-col-mid {
+  border-left: 1px solid rgba(255,255,255,0.15);
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.plan-price {
+  font-size: 12px; font-weight: 700; color: var(--yellow);
+  font-family: 'Montserrat', sans-serif;
+}
+.plan-price .plan-price-big {
+  font-size: 28px; font-weight: 900;
+  text-shadow: 1px 1px 0 #c62828, 2px 2px 0 #c62828;
+}
+.plan-name {
+  font-size: 14px; font-weight: 900; color: #fff;
+  letter-spacing: 1px; margin-bottom: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+.plan-socials {
+  display: flex; gap: 4px; justify-content: center; align-items: center;
+  margin-bottom: 10px;
+}
+.social-icon-red {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #e53935;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.social-icon-red svg {
+  width: 10px; height: 10px;
+}
+.plan-features {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 9px; color: #ddd; line-height: 1.9;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Bottom row: Logo & Branding + Monthly Package */
+.pricing-bottom-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  margin-bottom: 24px;
+}
+.pricing-card-big {
+  background: rgba(0,0,40,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  overflow: hidden; text-align: center;
+}
+.pricing-card-big-top {
+  padding: 28px 20px 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.big-price {
+  font-size: 18px; font-weight: 700; color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.big-price .big-price-num {
+  font-size: 72px; font-weight: 900;
+  text-shadow: 1px 1px 0 #c62828, 2px 2px 0 #c62828, 3px 3px 0 #c62828, 4px 4px 0 #c62828, 5px 5px 0 #c62828;
+}
+.big-subtitle {
+  font-size: 15px; font-weight: 800; color: #fff;
+  letter-spacing: 1px; text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.pricing-card-big-bottom {
+  padding: 16px 20px 28px;
+}
+.pricing-card-big-bottom p {
+  font-size: 14px; font-weight: 700; color: #fff;
+  letter-spacing: 1px; text-transform: uppercase; line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+}
+.pricing-note {
+  font-size: 12px !important; font-weight: 600 !important;
+  color: #ccc !important; margin-top: 4px;
+}
+
+/* V Shoots Banner */
+.vshoots-banner {
+  margin-top: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.vshoots-banner img {
+  width: 100%; height: auto; display: block;
+}
 
 /* ── CLIENTELE ── */
 .clientele-section { background: var(--navy); }
@@ -236,6 +387,8 @@ section { padding: 64px 48px; }
 .input-icon {
   color: #888; font-size: 14px; margin-right: 12px;
 }
+.contact-section { background: #1D1C77; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
 .contact-form input, .contact-form textarea {
   background: transparent; border: none;
   padding: 16px 0; color: #333; font-size: 13px;
@@ -300,10 +453,11 @@ section { padding: 64px 48px; }
   .team-grid, .team-row2 { grid-template-columns: repeat(2, 1fr); }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .client-grid { grid-template-columns: repeat(3, 1fr); }
-  .pricing-grid { grid-template-columns: 1fr; }
-  .pricing-cell { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.3) !important; padding: 32px 16px; }
-  .pricing-cell:last-child { border-bottom: none !important; }
-  .pricing-img { max-width: 500px; width: 100%; }
+  .pricing-top-row { grid-template-columns: 1fr; }
+  .pricing-hourly-daily { grid-template-columns: 1fr 1fr; }
+  .pricing-price .price-big { font-size: 46px; }
+  .plan-price .plan-price-big { font-size: 24px; }
+  .big-price .big-price-num { font-size: 60px; }
   .contact-grid { gap: 32px; }
   .footer-top { flex-direction: column; align-items: center; gap: 32px; text-align: center; }
   .footer-chat { align-items: center; }
@@ -332,7 +486,29 @@ section { padding: 64px 48px; }
   .why-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .client-grid { grid-template-columns: repeat(2, 1fr); }
-  .pricing-cell { padding: 24px 16px; }
+  .pricing-section { padding: 40px 16px; }
+  .pricing-top-row { grid-template-columns: 1fr; gap: 16px; }
+  .pricing-hourly-daily { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pricing-card-hd { padding: 20px 10px; gap: 6px; }
+  .pricing-price .price-big { font-size: 32px; }
+  .pricing-badge-red { font-size: 10px; padding: 3px 12px; letter-spacing: 1px; }
+  .pricing-badge-yellow { font-size: 9px; padding: 3px 10px; }
+  .pricing-desc { font-size: 9px; letter-spacing: 0.5px; }
+  .pricing-plans-card { padding: 16px 8px; }
+  .plan-price .plan-price-big { font-size: 18px; }
+  .plan-price { font-size: 10px; }
+  .plan-name { font-size: 10px; letter-spacing: 0.5px; }
+  .social-icon-red { width: 14px; height: 14px; }
+  .social-icon-red svg { width: 8px; height: 8px; }
+  .plan-socials { gap: 3px; margin-bottom: 6px; }
+  .plan-features { font-size: 7px; line-height: 1.6; }
+  .plan-col { padding: 0 4px; }
+  .pricing-bottom-row { grid-template-columns: 1fr; gap: 16px; }
+  .big-price .big-price-num { font-size: 52px; }
+  .big-subtitle { font-size: 12px; }
+  .pricing-card-big-bottom p { font-size: 12px; letter-spacing: 0.5px; }
+  .pricing-card-big-top { padding: 20px 16px 12px; }
+  .pricing-card-big-bottom { padding: 12px 16px 24px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .contact-info p { font-size: 14px; }
   .whatsapp-cta { font-size: 20px; width: 100%; justify-content: center; }

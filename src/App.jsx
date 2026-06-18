@@ -5,12 +5,12 @@ import LogoImg from './logos/cb website ALL IMAGES/CB LOGO.png';
 import MentorImg from './logos/cb website ALL IMAGES/3.png';
 import TeamImg1 from './logos/cb website ALL IMAGES/4.png';
 import TeamImg2 from './logos/cb website ALL IMAGES/5.png';
-import TeamImg3 from './logos/cb website ALL IMAGES/6.png';
 import TeamImg4 from './logos/cb website ALL IMAGES/7.png';
 import TeamImg5 from './logos/cb website ALL IMAGES/8.png';
 import TeamImg6 from './logos/cb website ALL IMAGES/9.png';
 import TeamImg7 from './logos/cb website ALL IMAGES/10.png';
 import TeamImg8 from './logos/cb website ALL IMAGES/11.png';
+import TeamImgVijay from './logos/cb website ALL IMAGES/vijay.png';
 import PortfolioImg1 from './logos/cb website ALL IMAGES/12.png';
 import PortfolioImg2 from './logos/cb website ALL IMAGES/13.png';
 import PortfolioImg3 from './logos/cb website ALL IMAGES/14.png';
@@ -21,6 +21,7 @@ import PricingImg1 from './logos/cb website ALL IMAGES/18.png';
 import PricingImg2 from './logos/cb website ALL IMAGES/19.png';
 import PricingImg3 from './logos/cb website ALL IMAGES/20.png';
 import PricingImg4 from './logos/cb website ALL IMAGES/21.png';
+import PackageImg from './logos/cb website ALL IMAGES/package.png';
 import ClientLogo1 from './logos/1.png';
 import ClientLogo2 from './logos/2.png';
 import ClientLogo3 from './logos/3.png';
@@ -106,7 +107,7 @@ function App() {
 
         <div className="hero-buttons">
           <a href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textDecoration: 'none', display: 'inline-block' }}>BOOK NOW</a>
-          <a href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer" className="btn-partner" style={{ textDecoration: 'none', display: 'inline-block' }}>BECOME A PARTNER</a>
+          <a href="https://wa.me/919100060079" target="_blank" rel="noopener noreferrer" className="btn-partner" style={{ textDecoration: 'none', display: 'inline-block' }}>BECOME A PARTNER</a>
         </div>
         <div style={{ marginTop: '20px' }}>
           <img src={TrustedToolsImg} alt="Trusted Tools: Adobe & CorelDRAW" style={{ height: '70px', objectFit: 'contain' }} />
@@ -179,6 +180,11 @@ function App() {
             <div className="team-role">Photography</div>
           </div>
           <div className="team-card">
+            <img src={TeamImgVijay} alt="D. Vijay Kumar" className="team-photo-placeholder" style={{ objectFit: 'cover', border: 'none', background: 'transparent' }} />
+            <div className="team-name">D. Vijay Kumar</div>
+            <div className="team-role">Sr. Graphic Designer</div>
+          </div>
+          <div className="team-card">
             <img src={TeamImg7} alt="Jagadish" className="team-photo-placeholder" style={{ objectFit: 'cover', border: 'none', background: 'transparent' }} />
             <div className="team-name">Jagadish</div>
             <div className="team-role">SM Manager</div>
@@ -246,18 +252,130 @@ function App() {
       <section className="pricing-section" id="pricing">
         <p className="section-title" style={{ marginBottom: '40px' }}>PRICING</p>
 
-        <div className="pricing-grid">
-          <div className="pricing-cell border-right border-bottom">
-            <img src={PricingImg1} alt="Hourly and Daily Plans" className="pricing-img" />
+        <div className="pricing-layout">
+          {/* ── TOP ROW ── */}
+          <div className="pricing-top-row">
+            {/* Left: Per Hour & Per Day */}
+            <div className="pricing-hourly-daily">
+              <div className="pricing-card-hd">
+                <div className="pricing-badge-red">PER HOUR</div>
+                <div className="pricing-price"><span className="rupee-red">₹</span><span className="price-big">999</span>/-</div>
+                <div className="pricing-badge-yellow">1 HOUR ON-SCREEN</div>
+                <p className="pricing-desc">PROFESSIONAL<br/>GRAPHIC DESIGNER</p>
+              </div>
+              <div className="pricing-card-hd">
+                <div className="pricing-badge-red">PER DAY</div>
+                <div className="pricing-price"><span className="rupee-red">₹</span><span className="price-big">6999</span>/-</div>
+                <div className="pricing-badge-yellow">8 HOURS ON-SCREEN</div>
+                <p className="pricing-desc">DEDICATED<br/>GRAPHIC DESIGNER</p>
+              </div>
+            </div>
+
+            {/* Right: Basic / Standard / Premium */}
+            <div className="pricing-plans-card">
+              <div className="pricing-plans-row">
+                <div className="plan-col">
+                  <div className="plan-price"><span className="rupee-red">₹</span><span className="plan-price-big">19999</span>/-</div>
+                  <div className="plan-name">BASIC</div>
+                  <div className="plan-socials">
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg></span>
+                  </div>
+                  <ul className="plan-features">
+                    <li>Flyer Design - 1</li>
+                    <li>Creative Design Support - 6hrs</li>
+                    <li>Static Post Designs - 10</li>
+                    <li>Monthly Festival Greetings</li>
+                    <li>Complete 3 Platforms Account Handling</li>
+                    <li>Creation of Ad Campaign</li>
+                    <li>Monthly Report Creation</li>
+                    <li>Ad Budget Release by Client</li>
+                  </ul>
+                </div>
+                <div className="plan-col plan-col-mid">
+                  <div className="plan-price"><span className="rupee-red">₹</span><span className="plan-price-big">29999</span>/-</div>
+                  <div className="plan-name">STANDARD</div>
+                  <div className="plan-socials">
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg></span>
+                  </div>
+                  <ul className="plan-features">
+                    <li>Flyer Design - 2</li>
+                    <li>Creative Design Support - 8hrs</li>
+                    <li>Static Post Designs - 15</li>
+                    <li>Reels - 4 (20-30 secs)</li>
+                    <li>Monthly Festival Greetings</li>
+                    <li>Complete 3 Platforms Account Handling</li>
+                    <li>Creation of Ad Campaign</li>
+                    <li>Monthly Report Creation</li>
+                    <li>Ad Budget Release by Client</li>
+                  </ul>
+                </div>
+                <div className="plan-col">
+                  <div className="plan-price"><span className="rupee-red">₹</span><span className="plan-price-big">49999</span>/-</div>
+                  <div className="plan-name">PREMIUM</div>
+                  <div className="plan-socials">
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg></span>
+                    <span className="social-icon-red"><svg viewBox="0 0 24 24" fill="#fff" width="10" height="10"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></span>
+                  </div>
+                  <ul className="plan-features">
+                    <li>Daily 1hr Screen Share Works</li>
+                    <li>Unlimited Creative Support</li>
+                    <li>Business Growth Ideas</li>
+                    <li>Static Post Designs - 25+</li>
+                    <li>Reels - 6 (20-30 secs)</li>
+                    <li>Monthly Festival Greetings</li>
+                    <li>Complete 5 Platforms Account Handling</li>
+                    <li>Creation of Ad Campaign</li>
+                    <li>Monthly Report Creation</li>
+                    <li>Ad Budget Release by Client</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="pricing-cell border-bottom">
-            <img src={PricingImg2} alt="Basic, Standard, Premium Plans" className="pricing-img" />
+
+          {/* ── BOTTOM ROW ── */}
+          <div className="pricing-bottom-row">
+            {/* Left: Logo & Branding */}
+            <div className="pricing-card-big">
+              <div className="pricing-card-big-top">
+                <div className="big-price"><span className="rupee-red">₹</span><span className="big-price-num">14999</span>/-</div>
+                <div className="big-subtitle">LOGO & BRANDING IDENTITY</div>
+                <div className="pricing-badge-yellow">DELIVERY IN 48 HOURS</div>
+              </div>
+              <div className="pricing-card-big-bottom">
+                <p>LOGO DESIGN - 3 OPTIONS</p>
+                <p>STATIONARY - 5 ITEMS</p>
+                <p>SIGNAGE BRANDING</p>
+                <p>BRANDING MANUAL</p>
+              </div>
+            </div>
+
+            {/* Right: Monthly Package */}
+            <div className="pricing-card-big">
+              <div className="pricing-card-big-top">
+                <div className="big-price"><span className="rupee-red">₹</span><span className="big-price-num">24999</span>/-</div>
+                <div className="big-subtitle">ANY GRAPHIC DESIGN WORK</div>
+                <div className="pricing-badge-yellow">MONTHLY PACKAGE</div>
+              </div>
+              <div className="pricing-card-big-bottom">
+                <p>SOCIAL MEDIA POSTS</p>
+                <p>BROCHURE / FLYER / PPT</p>
+                <p>MENU / CATALOGUE</p>
+                <p>ANY CREATIVE ARTWORKS</p>
+                <p className="pricing-note">(EXCEPT LOGO BRANDING)</p>
+              </div>
+            </div>
           </div>
-          <div className="pricing-cell border-right">
-            <img src={PricingImg3} alt="Logo & Branding Identity" className="pricing-img" />
-          </div>
-          <div className="pricing-cell">
-            <img src={PricingImg4} alt="Monthly Package" className="pricing-img" />
+
+          {/* ── V SHOOTS BANNER ── */}
+          <div className="vshoots-banner">
+            <img src={PackageImg} alt="V Shoots - Reel/AD ₹2999 - Professional Mobile Shoot & Editors" />
           </div>
         </div>
       </section>
@@ -295,7 +413,7 @@ function App() {
         <div className="testimonial-list">
           <div className="testimonial-card">
             <div className="testimonial-author">KUBERA SILKS<br />SRINIVAS</div>
-            <div className="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+            <div className="testimonial-text">"We have been working together for over a decade. Perfection from day 1 till now! Their dedication and graphic design quality are absolutely unmatched."</div>
           </div>
           <div className="testimonial-card" style={{ opacity: 0.5 }}>
             <div className="testimonial-author">CLIENT NAME</div>
