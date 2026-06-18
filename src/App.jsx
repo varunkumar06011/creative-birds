@@ -87,8 +87,11 @@ function App() {
           <a href="#clientele">CLIENTELE</a><span className="sep">|</span>
           <a href="#contact">CONTACT US</a>
         </div>
-        <a href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer" className="btn-schedule" style={{ textDecoration: 'none', display: 'inline-block' }}>SCHEDULE NOW</a>
+        <a href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer" className="btn-schedule desktop-schedule" style={{ textDecoration: 'none', display: 'inline-block' }}>SCHEDULE NOW</a>
       </nav>
+      <div className="mobile-schedule-wrapper">
+        <a href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer" className="btn-schedule" style={{ textDecoration: 'none', display: 'block', width: '100%', textAlign: 'center', boxSizing: 'border-box' }}>SCHEDULE NOW</a>
+      </div>
 
       {/* ── HERO ── */}
       <section className="hero" id="home">
@@ -134,7 +137,6 @@ function App() {
         <div className="mentor-card">
           <div className="mentor-photo-placeholder" style={{ border: 'none', background: 'transparent', padding: 0 }}>
           <img src={MentorImg} alt="Vijay Boda" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
-          <div className="name-tag" style={{ marginTop: '-12px', zIndex: 2, position: 'relative' }}>VIJAY BODA</div>
         </div>
           <div className="mentor-text">
             <p className="tagline">Crazy Creatolives…</p>
@@ -159,18 +161,13 @@ function App() {
             <div className="team-name">Mukesh K</div>
             <div className="team-role">Managing Partner & SMM</div>
           </div>
-          <div className="team-card">
-            <img src={TeamImg3} alt="Vijay Aparanj" className="team-photo-placeholder" style={{ objectFit: 'cover', border: 'none', background: 'transparent' }} />
-            <div className="team-name">Vijay Aparanj</div>
-            <div className="team-role">Managing Partner & Operations Head</div>
-          </div>
+
           <div className="team-card">
             <img src={TeamImg4} alt="Raju V" className="team-photo-placeholder" style={{ objectFit: 'cover', border: 'none', background: 'transparent' }} />
             <div className="team-name">Raju V</div>
             <div className="team-role">Managing Partner & OOH Manager</div>
           </div>
-        </div>
-        <div className="team-row2">
+
           <div className="team-card">
             <img src={TeamImg5} alt="Ravi Teja" className="team-photo-placeholder" style={{ objectFit: 'cover', border: 'none', background: 'transparent' }} />
             <div className="team-name">Ravi Teja</div>
@@ -203,7 +200,7 @@ function App() {
         <div className="why-grid">
           <div className="why-card">10+ Experienced<br />Graphic Designers</div>
           <div className="why-card">Easy Booking<br />Call Us / Whatsapp Chat</div>
-          <div className="why-card">Hourly Charges<br />Starts From ₹399/-</div>
+          <div className="why-card">Hourly Charges<br />Starts From ₹999/-</div>
           <div className="why-card">Safe & Secure<br />Copyright Stock Images</div>
           <div className="why-card">Instant Design<br />On-Screen Delivery</div>
           <div className="why-card">Friendly Creative Support<br />On-spot Implement</div>
