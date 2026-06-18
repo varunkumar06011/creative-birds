@@ -216,27 +216,27 @@ function App() {
       <section className="portfolio-section" id="portfolio">
         <p className="section-title" style={{ fontSize: '18px', marginBottom: '32px' }}>OUR PORTFOLIO</p>
         <div className="portfolio-grid">
-          <a href="/cb_portfolio.pdf" download="cb_portfolio.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg1} alt="Logo Designs" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Logo Designs</div>
           </a>
-          <a href="/cb_portfolio.pdf" download="cb_portfolio.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg2} alt="Stationary, Flyers & Brochures" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Stationary, Flyers & Brochures</div>
           </a>
-          <a href="/cb_portfolio.pdf" download="cb_portfolio.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg3} alt="Packaging" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Packaging</div>
           </a>
-          <a href="/cb_portfolio.pdf" download="cb_portfolio.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg4} alt="Branding" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Branding</div>
           </a>
-          <a href="/cb_portfolio.pdf" download="cb_portfolio.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg5} alt="Social Media Creatives" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">Social Media Creatives</div>
           </a>
-          <a href="/cb_portfolio.pdf" download="cb_portfolio.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
+          <a href="/images/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg6} alt="3D & Videos" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
             <div className="portfolio-label">3D & Videos</div>
           </a>
