@@ -4,7 +4,7 @@ import TrustedToolsImg from './logos/cb website ALL IMAGES/2.png';
 import LogoImg from './logos/cb website ALL IMAGES/CB LOGO.png';
 import MentorImg from './logos/cb website ALL IMAGES/3.png';
 import TeamImg1 from './logos/cb website ALL IMAGES/4.png';
-import TeamImg2 from './logos/cb website ALL IMAGES/K. MUKESH.png';
+import TeamImg2 from './logos/cb website ALL IMAGES/image.png';
 import TeamImg4 from './logos/cb website ALL IMAGES/7.png';
 import TeamImg5 from './logos/cb website ALL IMAGES/8.png';
 import TeamImg6 from './logos/cb website ALL IMAGES/9.png';
