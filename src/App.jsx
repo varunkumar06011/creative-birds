@@ -72,7 +72,61 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '+' }) => {
   return <span ref={counterRef}>{count}{suffix}</span>;
 };
 
+const testimonials = [
+  { company: 'KUBERA SILKS', name: 'Srinivas', text: 'We have been working together for over a decade. Perfection from day 1 till now! Their dedication and graphic design quality are absolutely unmatched.' },
+  { company: 'Rameshwari Silks', name: 'Duragam Prakash Matteti', text: "We've worked with you since the beginning, and your patience and creativity truly brought our vision to life. From the logo to our branding, you perfectly captured what we wanted. Thank you for your constant support and for going above and beyond for our opening!" },
+  { company: 'Vedicare', name: 'Dr. A. Nagaraju', text: 'Incredible work on our branding! You perfectly understood our concept and delivered a stunning logo and design. We truly appreciate your patience, endless revisions, and your unwavering support during our opening & NABH accreditation. Highly recommended!' },
+  { company: 'Deccan Chai', name: 'Velluli Gopi', text: "You've been with us from the start, and we couldn't be happier with our branding. Thank you for your incredible patience and for designing a logo that perfectly captures our vision. Your support made our opening a great success!" },
+  { company: 'TTCDA', name: 'Srinivas Kothapalli', text: 'From our logo to our overall branding, your work perfectly elevated our vision. We truly appreciate your immense patience, openness to feedback and the dedicated support provided. Thank you for being a part of our journey!' },
+  { company: 'V-Grand Group', name: 'T. Vinod Kumar', text: 'Fantastic experience working with you from day one. You captured our vision perfectly, handled every revision with patience, and were a huge support during our opening. Thank you for helping us build such a strong brand!' },
+];
+
 function App() {
+  const scrollRef = useRef(null);
+  const isPausedRef = useRef(false);
+  const rafRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+    let pos = 0;
+    const speed = 0.6;
+
+    const animate = () => {
+      if (!isPausedRef.current) {
+        pos += speed;
+        const half = container.scrollWidth / 2;
+        if (pos >= half) {
+          pos = 0;
+          container.scrollLeft = 0;
+        } else {
+          container.scrollLeft = pos;
+        }
+      } else {
+        pos = container.scrollLeft;
+      }
+      rafRef.current = requestAnimationFrame(animate);
+    };
+
+    rafRef.current = requestAnimationFrame(animate);
+
+    const pause = () => { isPausedRef.current = true; };
+    const resume = () => { isPausedRef.current = false; };
+
+    container.addEventListener('mouseenter', pause);
+    container.addEventListener('mouseleave', resume);
+    container.addEventListener('touchstart', pause, { passive: true });
+    container.addEventListener('touchend', resume);
+
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+      container.removeEventListener('mouseenter', pause);
+      container.removeEventListener('mouseleave', resume);
+      container.removeEventListener('touchstart', pause);
+      container.removeEventListener('touchend', resume);
+    };
+  }, []);
+
   return (
     <>
       {/* ── NAV ── */}
@@ -410,19 +464,19 @@ function App() {
       {/* ── TESTIMONIALS ── */}
       <section className="testimonial-section">
         <p className="section-title">OUR LOVING CUSTOMERS SAY</p>
-        <div className="testimonial-list">
-          <div className="testimonial-card">
-            <div className="testimonial-author">KUBERA SILKS<br />SRINIVAS</div>
-            <div className="testimonial-text">"We have been working together for over a decade. Perfection from day 1 till now! Their dedication and graphic design quality are absolutely unmatched."</div>
-          </div>
-          <div className="testimonial-card" style={{ opacity: 0.5 }}>
-            <div className="testimonial-author">CLIENT NAME</div>
-            <div className="testimonial-text">Testimonial text goes here…</div>
-          </div>
-          <div className="testimonial-card" style={{ opacity: 0.5 }}>
-            <div className="testimonial-author">CLIENT NAME</div>
-            <div className="testimonial-text">Testimonial text goes here…</div>
-          </div>
+        <div className="testimonial-list" ref={scrollRef}>
+          {testimonials.map((t, i) => (
+            <div className="testimonial-card" key={`a-${i}`}>
+              <div className="testimonial-author">{t.company}<br />{t.name}</div>
+              <div className="testimonial-text">"{t.text}"</div>
+            </div>
+          ))}
+          {testimonials.map((t, i) => (
+            <div className="testimonial-card" key={`b-${i}`}>
+              <div className="testimonial-author">{t.company}<br />{t.name}</div>
+              <div className="testimonial-text">"{t.text}"</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -452,7 +506,7 @@ function App() {
                 <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#fff', color: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 'bold' }}>yt</div>
                 <span style={{ color: '#fff', fontSize: '16px' }}>/creativebirds</span>
               </div>
-              <div className="contact-cities">VIZAG | ONGOLE | PUNE | BANGLORE</div>
+              <div className="contact-cities">HYDERABAD | VIZAG | ONGOLE | PUNE | BANGLORE</div>
               <a className="whatsapp-cta" href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer">
                 DM <svg width="32" height="32" fill="var(--navy)" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.8 3.08 1.23 4.79 1.23 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.46 14.1c-.23.65-1.32 1.25-1.84 1.34-.48.09-1.1.18-3.41-.78-2.77-1.16-4.54-4.01-4.68-4.2-.14-.18-1.12-1.49-1.12-2.84 0-1.35.7-2.03.95-2.31.25-.28.55-.35.74-.35.18 0 .37 0 .53.01.18.01.42-.07.65.48.23.55.78 1.91.85 2.05.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.3.35-.42.46-.14.14-.28.28-.12.55.16.28.71 1.18 1.54 1.91 1.06.94 1.95 1.23 2.22 1.37.28.14.44.12.6-.07.16-.2.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.62.76 1.89.9.28.14.46.21.53.33.07.12.07.69-.16 1.34z"/></svg> 91000 600 49
               </a>
@@ -484,10 +538,11 @@ function App() {
 
       {/* ── FOOTER ── */}
       <footer className="footer-section">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+        <div className="footer-top">
           <div className="footer-left">
             <p>© 2026 Creative Birds</p>
-            <p>A product of PR ADVERTISE</p>
+            <p>A product of <strong>GEMBA BUZISOLN PRIVATE LIMITED</strong></p>
+            <p>In Association <strong>PR ADVERTISE</strong></p>
           </div>
           <div className="footer-chat">
             <div className="chat-bubble main-bubble">Hi! How can we help?</div>
