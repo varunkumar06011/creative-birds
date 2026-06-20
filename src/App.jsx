@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import HeroImg from './logos/cb website ALL IMAGES/1.png';
 import TrustedToolsImg from './logos/cb website ALL IMAGES/2.png';
 import LogoImg from './logos/cb website ALL IMAGES/CB LOGO.png';
@@ -506,7 +507,7 @@ function App() {
                 <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#fff', color: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 'bold' }}>yt</div>
                 <span style={{ color: '#fff', fontSize: '16px' }}>/creativebirds</span>
               </div>
-              <div className="contact-cities">HYDERABAD | VIZAG | ONGOLE | PUNE | BANGLORE</div>
+              <div className="contact-cities"><Link to="/graphic-design-hyderabad" style={{ color: 'inherit', textDecoration: 'none' }}>HYDERABAD</Link> | <Link to="/social-media-marketing-vizag" style={{ color: 'inherit', textDecoration: 'none' }}>VIZAG</Link> | <Link to="/branding-agency-ongole" style={{ color: 'inherit', textDecoration: 'none' }}>ONGOLE</Link> | <Link to="/ad-shoot-pune" style={{ color: 'inherit', textDecoration: 'none' }}>PUNE</Link> | <Link to="/3d-graphic-design-bengaluru" style={{ color: 'inherit', textDecoration: 'none' }}>BANGLORE</Link></div>
               <a className="whatsapp-cta" href="https://wa.me/919100060049" target="_blank" rel="noopener noreferrer">
                 DM <svg width="32" height="32" fill="var(--navy)" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.8 3.08 1.23 4.79 1.23 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.46 14.1c-.23.65-1.32 1.25-1.84 1.34-.48.09-1.1.18-3.41-.78-2.77-1.16-4.54-4.01-4.68-4.2-.14-.18-1.12-1.49-1.12-2.84 0-1.35.7-2.03.95-2.31.25-.28.55-.35.74-.35.18 0 .37 0 .53.01.18.01.42-.07.65.48.23.55.78 1.91.85 2.05.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.3.35-.42.46-.14.14-.28.28-.12.55.16.28.71 1.18 1.54 1.91 1.06.94 1.95 1.23 2.22 1.37.28.14.44.12.6-.07.16-.2.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.62.76 1.89.9.28.14.46.21.53.33.07.12.07.69-.16 1.34z"/></svg> 91000 600 49
               </a>
