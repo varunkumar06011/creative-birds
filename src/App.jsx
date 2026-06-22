@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import HeroImg from './logos/cb website ALL IMAGES/1.png';
 import TrustedToolsImg from './logos/cb website ALL IMAGES/2.png';
@@ -130,6 +131,12 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Creative Birds — On-Screen Graphic Design Studio | Hyderabad & India</title>
+        <meta name="description" content="India's first hourly on-screen graphic design studio. Creative Birds offers logo design, branding, packaging, social media creatives & 3D graphics. Delivery starts in 10 mins. Call 91000 60049." />
+        <link rel="canonical" href="https://www.creativebirds.in/" />
+      </Helmet>
+
       {/* ── NAV ── */}
       <nav>
         <div className="nav-logo">
@@ -152,12 +159,12 @@ function App() {
       {/* ── HERO ── */}
       <section className="hero" id="home">
         <p className="hero-eyebrow">WORLD'S FIRST HOURLY BASE ONSCREEN</p>
-        <p className="hero-service">GRAPHIC DESIGN SERVICE</p>
+        <h1 className="hero-service">On-Screen Graphic Design Studio</h1>
         <p className="hero-sub" style={{ fontWeight: 700, fontSize: '18px', color: '#fff' }}>Breif | Shedule | On-Screen Delivery Start in</p>
         <div className="hero-minutes">10 Minutes<span className="hero-asterisk">*</span></div>
 
         <div className="hero-illustration">
-          <img src={HeroImg} alt="Designer at Work" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
+          <img src={HeroImg} alt="Creative Birds graphic designer working live on screen delivering artwork in 10 minutes" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '16px' }} />
         </div>
 
         <div className="hero-buttons">
@@ -189,10 +196,10 @@ function App() {
 
       {/* ── MENTOR ── */}
       <section className="mentor-section" id="team">
-        <p className="section-title">OUR MENTOR</p>
+        <h2 className="section-title">Our Mentor</h2>
         <div className="mentor-card">
           <div className="mentor-photo-placeholder" style={{ border: 'none', background: 'transparent', padding: 0 }}>
-          <img src={MentorImg} alt="Vijay Boda" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
+          <img src={MentorImg} alt="Vijay Boda — Founder and Mentor at Creative Birds Graphic Design Studio" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
         </div>
           <div className="mentor-text">
             <p className="tagline">Crazy Creatolives…</p>
@@ -205,7 +212,7 @@ function App() {
 
       {/* ── TEAM ── */}
       <section className="team-section">
-        <p className="section-title" style={{ textAlign: 'center' }}>OUR TEAM</p>
+        <h2 className="section-title" style={{ textAlign: 'center' }}>Our Team</h2>
         <div className="team-grid">
           <div className="team-card">
             <img src={TeamImg1} alt="Ramya Sree" className="team-photo-placeholder" style={{ objectFit: 'cover', border: 'none', background: 'transparent' }} />
@@ -256,7 +263,7 @@ function App() {
 
       {/* ── WHY CHOOSE US ── */}
       <section className="why-section">
-        <p className="section-title">WHY CHOOSE US</p>
+        <h2 className="section-title">Why Choose Us</h2>
         <p className="section-subtitle">Not Just Instant Delivery, But...</p>
         <div className="why-grid">
           <div className="why-card">10+ Experienced<br />Graphic Designers</div>
@@ -272,7 +279,7 @@ function App() {
 
       {/* ── PORTFOLIO ── */}
       <section className="portfolio-section" id="portfolio">
-        <p className="section-title" style={{ fontSize: '18px', marginBottom: '32px' }}>OUR PORTFOLIO</p>
+        <h2 className="section-title" style={{ fontSize: '18px', marginBottom: '32px' }}>Our Portfolio</h2>
         <div className="portfolio-grid">
           <a href="/CB_PORTFOLIO.pdf" download="CB_PORTFOLIO.pdf" className="portfolio-card" style={{ textDecoration: 'none' }}>
             <img src={PortfolioImg1} alt="Logo Designs" className="portfolio-img" style={{ objectFit: 'cover', background: '#fff', padding: '0' }} />
@@ -305,7 +312,7 @@ function App() {
 
       {/* ── PRICING ── */}
       <section className="pricing-section" id="pricing">
-        <p className="section-title" style={{ marginBottom: '40px' }}>PRICING</p>
+        <h2 className="section-title" style={{ marginBottom: '40px' }}>Pricing</h2>
 
         <div className="pricing-layout">
           {/* ── TOP ROW ── */}
@@ -439,7 +446,7 @@ function App() {
 
       {/* ── CLIENTELE ── */}
       <section className="clientele-section" id="clientele">
-        <p className="section-title">OUR CLIENTELE</p>
+        <h2 className="section-title">Our Clientele</h2>
         <div className="client-grid">
           <div className="client-logo" style={{ height: '80px', padding: '12px' }}><img src={ClientLogo1} alt="Heritage" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
           <div className="client-logo" style={{ height: '80px', padding: '12px' }}><img src={ClientLogo2} alt="Samadhan" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
@@ -464,7 +471,7 @@ function App() {
 
       {/* ── TESTIMONIALS ── */}
       <section className="testimonial-section">
-        <p className="section-title">OUR LOVING CUSTOMERS SAY</p>
+        <h2 className="section-title">Our Loving Customers Say</h2>
         <div className="testimonial-list" ref={scrollRef}>
           {testimonials.map((t, i) => (
             <div className="testimonial-card" key={`a-${i}`}>
@@ -485,7 +492,7 @@ function App() {
 
       {/* ── CONTACT ── */}
       <section className="contact-section" id="contact">
-        <p className="section-title">CONTACT US</p>
+        <h2 className="section-title">Contact Us</h2>
         <div className="contact-grid">
           <div>
             <div style={{ marginBottom: '24px' }}>
